@@ -5,6 +5,8 @@
  */
 package p2p.messenger;
 
+import java.awt.Color;
+import java.awt.Container;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -63,7 +65,7 @@ public class Client {
     }
 }
 
-class Receiver implements Runnable{
+ class Receiver implements Runnable{
     
     InputStream is;
     public Receiver(InputStream is){
@@ -81,6 +83,12 @@ class Receiver implements Runnable{
                 System.out.println("Inside client receiver thread before readline");
                 message = br.readLine();
                 System.out.println("Recieved message is :- " + message);
+                
+                if(message == "lal")
+                {
+                    //c.getContentPane().setBackground(new Color(70,80,70));
+                   // setBackground(Color.red);
+                }
             } catch (IOException ex) {
                 Logger.getLogger(Receiver.class.getName()).log(Level.SEVERE, null, ex);
             }

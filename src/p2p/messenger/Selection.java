@@ -5,6 +5,9 @@
  */
 package p2p.messenger;
 
+import static java.awt.Color.black;
+import static java.awt.Color.cyan;
+import static java.awt.Color.red;
 import javax.swing.JOptionPane;
 
 /**
@@ -20,6 +23,8 @@ public class Selection extends javax.swing.JFrame {
      */
     public Selection() {
         initComponents();
+        getContentPane().setBackground( new java.awt.Color(59, 89, 152) );
+        this.setResizable(false);
     }
 
     /**
@@ -39,10 +44,14 @@ public class Selection extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        welcomelabel.setBackground(new java.awt.Color(255, 255, 0));
+        welcomelabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        welcomelabel.setForeground(new java.awt.Color(255, 255, 255));
         welcomelabel.setText("Welcome to P2P messenger");
 
-        sendbutton.setBackground(new java.awt.Color(255, 181, 8));
-        sendbutton.setForeground(new java.awt.Color(130, 31, 31));
+        sendbutton.setBackground(new java.awt.Color(255, 255, 255));
+        sendbutton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        sendbutton.setForeground(new java.awt.Color(51, 0, 153));
         sendbutton.setText("SEND REQUEST");
         sendbutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,8 +59,9 @@ public class Selection extends javax.swing.JFrame {
             }
         });
 
-        receivebutton.setBackground(new java.awt.Color(255, 181, 8));
-        receivebutton.setForeground(new java.awt.Color(130, 31, 31));
+        receivebutton.setBackground(new java.awt.Color(255, 255, 255));
+        receivebutton.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        receivebutton.setForeground(new java.awt.Color(51, 0, 153));
         receivebutton.setText("RECEIVE REQUEST");
         receivebutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,8 +69,9 @@ public class Selection extends javax.swing.JFrame {
             }
         });
 
-        about.setBackground(new java.awt.Color(255, 181, 8));
-        about.setForeground(new java.awt.Color(130, 31, 31));
+        about.setBackground(new java.awt.Color(255, 255, 255));
+        about.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        about.setForeground(new java.awt.Color(51, 0, 153));
         about.setText("ABOUT");
         about.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,8 +79,9 @@ public class Selection extends javax.swing.JFrame {
             }
         });
 
-        exit.setBackground(new java.awt.Color(255, 181, 8));
-        exit.setForeground(new java.awt.Color(130, 31, 31));
+        exit.setBackground(new java.awt.Color(255, 255, 255));
+        exit.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        exit.setForeground(new java.awt.Color(51, 0, 153));
         exit.setText("EXIT");
         exit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,27 +95,29 @@ public class Selection extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(124, 124, 124)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(exit, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(about, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(welcomelabel)
-                    .addComponent(sendbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(receivebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 127, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(exit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(about, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(receivebutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(sendbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(welcomelabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGap(0, 133, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(welcomelabel)
-                .addGap(28, 28, 28)
-                .addComponent(sendbutton)
+                .addContainerGap()
+                .addComponent(welcomelabel, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(receivebutton)
+                .addComponent(sendbutton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(about)
+                .addComponent(receivebutton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(exit)
-                .addContainerGap(124, Short.MAX_VALUE))
+                .addComponent(about, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(exit, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(101, Short.MAX_VALUE))
         );
 
         pack();
