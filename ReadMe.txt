@@ -18,8 +18,4 @@ How to use the Application:
 project done by:
 ==========================
 
-1. Moniruzzaman - 2014331055
-     (requirement analysis design, server and client side UI design, server and client side backend, saving messages as txt file, *file Sharing.)
-
-2. Ridoy Akanda - 2014331001
-	(UI Update)
+Moniruzzaman - 2014331055
